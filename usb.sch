@@ -1,0 +1,378 @@
+EESchema Schematic File Version 5
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+Comment5 ""
+Comment6 ""
+Comment7 ""
+Comment8 ""
+Comment9 ""
+$EndDescr
+Wire Wire Line
+	7200 3350 8000 3350
+Text HLabel 7500 3250 0    50   BiDi ~ 0
+USB_D-
+Text HLabel 7500 3150 0    50   BiDi ~ 0
+USB_D+
+Wire Wire Line
+	7800 3150 7800 3450
+Text HLabel 7450 2950 0    50   Output ~ 0
+VBUS
+Connection ~ 7800 3150
+Wire Wire Line
+	7500 3150 7800 3150
+$Comp
+L F1C200S_KIT-rescue:02.0008_R0402_10K_1%-0WJQ R20
+U 1 1 5E596B57
+P 7200 3650
+F 0 "R20" V 7246 3580 50  0000 R CNN
+F 1 "02.0008_R0402_10K_1%" H 7050 3840 50  0001 L BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7000 3410 50  0001 L BNN
+F 3 "" H 7000 3510 50  0001 L BNN
+F 4 "贴片电阻" H 7200 3650 50  0001 C CNN "分类"
+F 5 "02.0008" H 7000 3010 50  0001 L BNN "编码"
+F 6 "贴片电阻, 10K±1%, 0402" H 7150 3740 50  0001 L BNN "规格"
+F 7 "10K_1%" V 7155 3580 50  0000 R CNN "参数"
+	1    7200 3650
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7200 3350
+Wire Wire Line
+	7100 3350 7200 3350
+Text HLabel 7100 3350 0    50   Output ~ 0
+USB_ID
+Wire Wire Line
+	6900 3850 7200 3850
+Wire Wire Line
+	7200 3450 7200 3350
+$Comp
+L power:+3.3V #PWR056
+U 1 1 5E5A3BD7
+P 6900 3850
+F 0 "#PWR056" H 6900 3700 50  0001 C CNN
+F 1 "+3.3V" H 6915 4023 50  0000 C CNN
+F 2 "" H 6900 3850 50  0001 C CNN
+F 3 "" H 6900 3850 50  0001 C CNN
+	1    6900 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3250 7900 3250
+Wire Wire Line
+	7900 3250 7900 3450
+Connection ~ 7900 3250
+Wire Wire Line
+	7900 3850 7900 3900
+Wire Wire Line
+	8000 3350 8000 3450
+Connection ~ 8000 3350
+$Comp
+L power:GND #PWR063
+U 1 1 5E49231B
+P 7900 3900
+F 0 "#PWR063" H 7900 3650 50  0001 C CNN
+F 1 "GND" H 7905 3727 50  0000 C CNN
+F 2 "" H 7900 3900 50  0001 C CNN
+F 3 "" H 7900 3900 50  0001 C CNN
+	1    7900 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2950 8750 2950
+Wire Wire Line
+	7800 3150 8750 3150
+Wire Wire Line
+	7900 3250 8750 3250
+Wire Wire Line
+	8000 3350 8750 3350
+Text Notes 8375 2600 0    50   ~ 0
+use USB2512:\n- one port for wifi\n- second port for further usage
+$Comp
+L F1C200S_KIT-rescue:10.0002_USB_Micro-0WJQ J5
+U 1 1 5E3D7632
+P 9050 3150
+F 0 "J5" H 9107 3617 50  0000 C CNN
+F 1 "10.0002_USB_Micro" H 8850 3500 50  0001 L CNN
+F 2 "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal" H 9200 3100 50  0001 C CNN
+F 3 "https://item.szlcsc.com/10961.html" H 9200 3100 50  0001 C CNN
+F 4 "连接器" H 9050 3150 50  0001 C CNN "分类"
+F 5 "micro usb母座， 精拓金，四脚全插牛角型短针" H 9050 3150 50  0001 C CNN "规格"
+F 6 "USB_Micro" H 9107 3526 50  0000 C CNN "参数"
+F 7 "10.0002" H 9050 3150 50  0001 C CNN "编码"
+	1    9050 3150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Power_Protection:SP0503BAHT D2
+U 1 1 5F19C32D
+P 7900 3650
+F 0 "D2" H 8105 3695 50  0000 L CNN
+F 1 "SP0503BAHT" H 8105 3605 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-143" H 8125 3600 50  0001 L CNN
+F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 8025 3775 50  0001 C CNN
+	1    7900 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3700 9050 3700
+Wire Wire Line
+	9150 3550 9150 3700
+Connection ~ 9050 3700
+Wire Wire Line
+	9050 3550 9050 3700
+$Comp
+L power:GND #PWR070
+U 1 1 5E491B7B
+P 9050 3700
+F 0 "#PWR070" H 9050 3450 50  0001 C CNN
+F 1 "GND" H 9055 3527 50  0000 C CNN
+F 2 "" H 9050 3700 50  0001 C CNN
+F 3 "" H 9050 3700 50  0001 C CNN
+	1    9050 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2700 2850 2850
+NoConn ~ 3550 3450
+NoConn ~ 3050 2850
+NoConn ~ 3550 3350
+Text Label 3000 2700 0    50   ~ 0
+CP2104_RST
+NoConn ~ 3550 3150
+NoConn ~ 3550 3250
+Wire Wire Line
+	3550 3650 4000 3650
+NoConn ~ 3550 3950
+Wire Wire Line
+	3550 4250 3650 4250
+Wire Wire Line
+	3550 3750 4000 3750
+NoConn ~ 3550 4050
+Text Label 4150 4250 0    50   ~ 0
+CP2104_RST
+Text HLabel 4000 3650 2    50   Output ~ 0
+CPU_RXD
+Wire Wire Line
+	4050 4250 4450 4250
+Text HLabel 4000 3750 2    50   Input ~ 0
+CPU_TXD
+$Comp
+L F1C200S_KIT-rescue:02.0005_R0402_4K7_1%-0WJQ R18
+U 1 1 5E3C17D7
+P 3850 4250
+F 0 "R18" H 3850 4457 50  0000 C CNN
+F 1 "02.0005_R0402_4K7_1%" H 3700 4440 50  0001 L BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3650 4010 50  0001 L BNN
+F 3 "" H 3650 4110 50  0001 L BNN
+F 4 "贴片电阻" H 3850 4250 50  0001 C CNN "分类"
+F 5 "02.0005" H 3650 3610 50  0001 L BNN "编码"
+F 6 "贴片电阻, 4K7±1%, 0402" H 3800 4340 50  0001 L BNN "规格"
+F 7 "4K7_1%" H 3850 4366 50  0000 C CNN "参数"
+	1    3850 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L F1C200S_KIT-rescue:09.0001_CP2104-0WJQ U4
+U 1 1 5E3B59DA
+P 2850 3750
+F 0 "U4" H 2850 2661 50  0000 C CNN
+F 1 "09.0001_CP2104" H 2550 4600 50  0001 R CNN
+F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 3000 2800 50  0001 L CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/cp2104.pdf" H 2300 5000 50  0001 C CNN
+F 4 "IC" H 2850 3750 50  0001 C CNN "分类"
+F 5 "CP2014 USB转串口芯片" H 2850 3750 50  0001 C CNN "规格"
+F 6 "CP2104" H 2850 2570 50  0000 C CNN "参数"
+F 7 "09.0001" H 2850 3750 50  0001 C CNN "编码"
+	1    2850 3750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3550 4350
+NoConn ~ 3550 4450
+Connection ~ 2850 4750
+Wire Wire Line
+	2950 4750 2850 4750
+Wire Wire Line
+	2850 4750 2500 4750
+$Comp
+L power:GND #PWR043
+U 1 1 5E3C35ED
+P 2500 4750
+F 0 "#PWR043" H 2500 4500 50  0001 C CNN
+F 1 "GND" H 2505 4577 50  0000 C CNN
+F 2 "" H 2500 4750 50  0001 C CNN
+F 3 "" H 2500 4750 50  0001 C CNN
+	1    2500 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2850 2650 2700
+Wire Wire Line
+	2650 2700 2850 2700
+Connection ~ 2650 2700
+Connection ~ 2850 2700
+Wire Wire Line
+	2850 2700 3300 2700
+NoConn ~ 2150 3950
+NoConn ~ 2150 4050
+NoConn ~ 2150 4250
+NoConn ~ 2150 4150
+NoConn ~ 2150 4450
+Wire Wire Line
+	1750 1850 1750 3750
+Wire Wire Line
+	1850 1950 1850 3650
+Wire Wire Line
+	1800 1650 2000 1650
+Wire Wire Line
+	2000 3150 2000 1650
+Text HLabel 1800 1650 0    50   Output ~ 0
+VBUS
+Wire Wire Line
+	2650 2700 2250 2700
+Wire Wire Line
+	2400 2500 2250 2500
+Wire Wire Line
+	2650 2500 2400 2500
+Connection ~ 2400 2500
+$Comp
+L F1C200S_KIT-rescue:03.0009_C0402_100nF-0WJQ C34
+U 1 1 5E3BEB1F
+P 2650 2600
+F 0 "C34" H 2742 2646 50  0000 L CNN
+F 1 "03.0009_C0402_100nF" H 2660 2520 50  0001 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2050 2550 50  0001 C CNN
+F 3 "~" H 2650 2600 50  0001 C CNN
+F 4 "贴片瓷片电容" H 2650 2600 50  0001 C CNN "分类"
+F 5 "03.0009" H 2650 2600 50  0001 C CNN "编码"
+F 6 "100nF,16V,K,0402,X7R" H 2650 2600 50  0001 C CNN "规格"
+F 7 "100nF" H 2742 2555 50  0000 L CNN "参数"
+	1    2650 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L F1C200S_KIT-rescue:03.4002_C0603_2.2uF-0WJQ C33
+U 1 1 5E3BF31F
+P 2250 2600
+AR Path="/5E3BF31F" Ref="C33"  Part="1" 
+AR Path="/5E3A651C/5E3BF31F" Ref="C33"  Part="1" 
+AR Path="/5F1F2557/5E3BF31F" Ref="C33"  Part="1" 
+F 0 "C33" H 2342 2646 50  0000 L CNN
+F 1 "03.4002_C0603_2.2uF" H 2260 2520 50  0001 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1650 2550 50  0001 C CNN
+F 3 "~" H 2250 2600 50  0001 C CNN
+F 4 "贴片瓷片电容" H 2250 2600 50  0001 C CNN "分类"
+F 5 "03.4002" H 2250 2600 50  0001 C CNN "编码"
+F 6 "2.2uF,16V,K,X5R" H 2250 2600 50  0001 C CNN "规格"
+F 7 "2.2uF" H 2342 2555 50  0000 L CNN "参数"
+	1    2250 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR047
+U 1 1 5E3CA06D
+P 3250 2350
+F 0 "#PWR047" H 3250 2100 50  0001 C CNN
+F 1 "GND" H 3255 2177 50  0000 C CNN
+F 2 "" H 3250 2350 50  0001 C CNN
+F 3 "" H 3250 2350 50  0001 C CNN
+	1    3250 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR045
+U 1 1 5E3C10D4
+P 2400 2500
+F 0 "#PWR045" H 2400 2250 50  0001 C CNN
+F 1 "GND" H 2405 2327 50  0000 C CNN
+F 2 "" H 2400 2500 50  0001 C CNN
+F 3 "" H 2400 2500 50  0001 C CNN
+	1    2400 2500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2150 3350 2000 3350
+Wire Wire Line
+	1450 3550 1450 3350
+Wire Wire Line
+	1750 3750 2150 3750
+Wire Wire Line
+	1850 3650 2150 3650
+$Comp
+L power:GND #PWR042
+U 1 1 5E3BE197
+P 1450 3550
+F 0 "#PWR042" H 1450 3300 50  0001 C CNN
+F 1 "GND" H 1455 3377 50  0000 C CNN
+F 2 "" H 1450 3550 50  0001 C CNN
+F 3 "" H 1450 3550 50  0001 C CNN
+	1    1450 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 1950 1850 1950
+Wire Wire Line
+	2850 1850 1750 1850
+Wire Wire Line
+	2000 1650 2850 1650
+Text Notes 2100 1550 0    50   ~ 0
+Note: add tvs\n
+Connection ~ 2000 1650
+$Comp
+L F1C200S_KIT-rescue:10.0002_USB_Micro-0WJQ J2
+U 1 1 5E3A67D4
+P 3150 1850
+F 0 "J2" H 3207 2317 50  0000 C CNN
+F 1 "10.0002_USB_Micro" H 2950 2200 50  0001 L CNN
+F 2 "Connector_USB:USB_Micro-B_Amphenol_10103594-0001LF_Horizontal" H 3300 1800 50  0001 C CNN
+F 3 " ~" H 3300 1800 50  0001 C CNN
+F 4 "连接器" H 3150 1850 50  0001 C CNN "分类"
+F 5 "micro usb母座， 精拓金，四脚全插牛角型短针" H 3150 1850 50  0001 C CNN "规格"
+F 6 "USB_Micro" H 3207 2226 50  0000 C CNN "参数"
+F 7 "10.0002" H 3150 1850 50  0001 C CNN "编码"
+	1    3150 1850
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 2850 2050
+Wire Wire Line
+	3150 2250 3150 2350
+Wire Wire Line
+	3150 2350 3250 2350
+Connection ~ 3250 2350
+Wire Wire Line
+	3250 2250 3250 2350
+Wire Wire Line
+	2000 3350 2000 3150
+Connection ~ 2000 3150
+Wire Wire Line
+	2000 3150 1450 3150
+Wire Wire Line
+	2150 3150 2000 3150
+$Comp
+L F1C200S_KIT-rescue:03.4001_C0603_1uF-0WJQ C31
+U 1 1 5E3BC13F
+P 1450 3250
+AR Path="/5E3BC13F" Ref="C31"  Part="1" 
+AR Path="/5E3A651C/5E3BC13F" Ref="C31"  Part="1" 
+AR Path="/5F1F2557/5E3BC13F" Ref="C31"  Part="1" 
+F 0 "C31" H 1542 3296 50  0000 L CNN
+F 1 "03.4001_C0603_1uF" H 1460 3170 50  0001 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 850 3200 50  0001 C CNN
+F 3 "~" H 1450 3250 50  0001 C CNN
+F 4 "贴片瓷片电容" H 1450 3250 50  0001 C CNN "分类"
+F 5 "03.4001" H 1450 3250 50  0001 C CNN "编码"
+F 6 "1uF,16V,K,0603,,X7R" H 1450 3250 50  0001 C CNN "规格"
+F 7 "1uF" H 1542 3205 50  0000 L CNN "参数"
+	1    1450 3250
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
